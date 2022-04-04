@@ -1,4 +1,4 @@
-% EJERCICIO PRACTICO 3%
+% EJERCICIO PRACTICO 5%
 
 % Datos %
 L(1) = Link([0 0.317 0 -pi/2  0]);
@@ -18,32 +18,31 @@ L(6).qlim=[deg2rad(-255) deg2rad(255)];
 
 r = SerialLink(L,'name', 'PA10-6GDL');
 
-figure(1);
-qh = [0 0 0 0 0 0];
-qhQ = r.fkine(qh);
-r.plot(qh);
 
-figure(2);
-qe = [0 0.5236 1.5708 0 1.0472 0];
-qeQ = r.fkine(qe);
-r.plot(qe);
+q = [0 -pi/2 0 0 0 0];
+disp("1");
+disp(jacob0(r, q));
+disp(det(jacob0(r, q)));
+r.plot(q);
 
-figure(3);
-qs = [0 0.7854 1.5708 0 -0.7854 0];
-qsQ = r.fkine(qs);
-r.plot(qs);
-
-figure(4);
-q1 = [0 0.7854 0.7854 0 1.5708 0];
-q1Q = r.fkine(q1);
-r.plot(q1);
-
-figure(5);
-q2 = [0.3491 1.5708 0.7854 -0.39270 1.0472 0];
-q2Q = r.fkine(q2);
-r.plot(q2);
+q = [0 0 -pi/2 0 0 0];
+disp("2");
+disp(jacob0(r, q));
+disp(det(jacob0(r, q)));
+r.plot(q);
 
 
+q = [0 0 0 pi/2 0 0];
+disp("3");
+disp(jacob0(r, q));
+disp(det(jacob0(r, q)));
+r.plot(q);
 
 
+q = [0 0 0 0 0 pi/2];
+disp("4");
+disp(q);
+disp(jacob0(r, q));
+disp(det(jacob0(r, q)));
+r.plot(q);
 

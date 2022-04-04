@@ -2,7 +2,7 @@
 T = transl(-3,10,10)*trotx(-90)*troty(90);
 
 % Redondeamos %
-round(T)
-trplot(T)
+round(T);
+trplot(T);
 
 
