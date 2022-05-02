@@ -17,8 +17,5 @@ L(5).qlim=[deg2rad(-165) deg2rad(165)];
 L(6).qlim=[deg2rad(-255) deg2rad(255)];
 
 r = SerialLink(L,'name', 'PA10-6GDL');
-r.n;
-r.links;
-
 
 
